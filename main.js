@@ -1,6 +1,6 @@
 import Product from './modules/products.js';
 import {displayProduct} from './modules/display.js';
-
+import ShoppingCart from './modules/shoppingbag.js';
 
 
 const MOCKPRODUCTS = [
