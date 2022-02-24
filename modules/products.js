@@ -1,4 +1,4 @@
-class Product{
+export default class Product { //added the export here
     constructor(name, url, price, stockBalance){
         this.name = name;
         this.url = url; 
@@ -7,15 +7,8 @@ class Product{
     }
 
     updateStockBalance() {
-        console.log('Send my information to database.')
+        console.log('UPDATESTOCKBALANCE: Send my information to database.')
         const str = `${this.name}, ${this.url},${this.price},${this.stockBalance}`;
         return str;
     }
 }
-
-// const venusFlyTrap = new Product('Venus Fly Trap', 'https://www.plantagen.se/venus-flugfalla.html', 89, 100);
-// console.log(venusFlyTrap);
-
-
-
-export {Product};

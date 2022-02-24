@@ -1,4 +1,4 @@
-import {Product} from './modules/products.js';
+import Product from './modules/products.js';
 import {displayProduct} from './modules/display.js';
 
 
@@ -33,13 +33,11 @@ const MOCKPRODUCTS = [
         url:'kj212123kjasdkjsadkaetawd12lk',
         price: 200,
         stockBalance: 100
-    } 
+    },
   ];
 
 const products = MOCKPRODUCTS.map((data)=>{
     return new Product(data.name, data.url, data.price, data.stockBalance);
 })
 
-console.log(products);
-
-displayProduct(MOCKPRODUCTS);
+displayProduct(products);
