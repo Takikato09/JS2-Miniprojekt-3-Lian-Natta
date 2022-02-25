@@ -1,3 +1,6 @@
+import ShoppingCart from "./shoppingbag.js";
+
+
 function displayProduct(productList) { //changed into productList instead of mockproduct to make it clearer. 
     const container = document.querySelector('.product-wrapper'); //this is outside the loop since we only want to loop the products, not the wrapper. 
     for (const product of productList) {
@@ -23,10 +26,16 @@ function displayProduct(productList) { //changed into productList instead of moc
         const prodButton = document.createElement('button');
         productCard.appendChild(prodButton);
         prodButton.textContent = 'buy';
+        prodButton.addEventListener('click', sendToCart);
 
-        
         productCard.className = 'product-card'
+    } 
+
     }
-}
+
+    function sendToCart () {
+        console.log('Send product to shopping cart.');
+
+    }
 
 export {displayProduct};

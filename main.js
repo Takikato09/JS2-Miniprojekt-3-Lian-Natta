@@ -41,3 +41,5 @@ const products = MOCKPRODUCTS.map((data)=>{
 })
 
 displayProduct(products);
+
+

@@ -1,15 +1,18 @@
+import {displayProduct} from './display.js';
 export default class ShoppingCart {
     constructor () {
         this.items = []; //should be an empty array
         
     }
 
-    addItem(product){
-        //TODO: Add logic for checking if the product is already in the cart and what should happen then?
-        // Add-button which adds one more of that specific product
+        addItem(product) {
+        
+         //TODO: Add logic for checking if the product is already in the cart and what should happen then?
+         // Add-button which adds one more of that specific product
 
         this.items.push(product);
-    }
+     }
+
     removeItem(product){
         //Google removing item from array. 
         // Delete-button which erases the selected product from shopping cart
@@ -28,6 +31,7 @@ export default class ShoppingCart {
     }
 
 }
+
 
 
 
