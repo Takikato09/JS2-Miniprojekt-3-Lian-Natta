@@ -1,6 +1,7 @@
 import Product from './modules/products.js';
 import {displayProduct} from './modules/display.js';
 import ShoppingCart from './modules/shoppingbag.js';
+import {sendToCart} from './modules/display.js';
 
 
 const MOCKPRODUCTS = [
@@ -41,5 +42,6 @@ const products = MOCKPRODUCTS.map((data)=>{
 })
 
 displayProduct(products);
+sendToCart(products);
 
 

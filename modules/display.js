@@ -3,6 +3,7 @@ import ShoppingCart from "./shoppingbag.js";
 
 function displayProduct(productList) { //changed into productList instead of mockproduct to make it clearer. 
     const container = document.querySelector('.product-wrapper'); //this is outside the loop since we only want to loop the products, not the wrapper. 
+
     for (const product of productList) {
         const productCard = document.createElement('div');
         container.append(productCard);
@@ -23,6 +24,8 @@ function displayProduct(productList) { //changed into productList instead of moc
         productCard.appendChild(prodStockBalance);
         prodStockBalance.textContent = 'Stock: ' + product.stockBalance;
 
+        // Fix button! It loops and is "the same" on all products which is why we only register the click-event but can't see WHICH product is being added. Every product needs a unique button
+
         const prodButton = document.createElement('button');
         productCard.appendChild(prodButton);
         prodButton.textContent = 'buy';
@@ -33,9 +36,12 @@ function displayProduct(productList) { //changed into productList instead of moc
 
     }
 
-    function sendToCart () {
-        console.log('Send product to shopping cart.');
+    function sendToCart (products) {
+        // This function works cause the console logs all 5 products as an array
+        console.log('Send product to shopping cart.', products);
+        return sendToCart;
 
     }
 
 export {displayProduct};
+export {sendToCart};
