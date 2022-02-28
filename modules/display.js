@@ -1,7 +1,10 @@
 function displayProducts(productList, addToCart) { //changed into productList instead of mockproduct to make it clearer. 
     const container = document.querySelector('.product-wrapper'); //this is outside the loop since we only want to loop the products, not the wrapper. 
 
+    console.log(productList); // For Firebase reference
+
     for (const product of productList) {
+        
         const productCard = document.createElement('div');
         container.append(productCard);
 

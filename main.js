@@ -8,31 +8,31 @@ const MOCKPRODUCTS = [
         name: 'Venus Flytrap',
         url:'img/venusfalla-ny.jpeg',
         price: 199,
-        stockBalance: 100
+        stockBalance: 20
     },
     {
         name: 'Hibiskus',
         url:'img/hibiskus.jpeg',
         price: 249,
-        stockBalance: 50
+        stockBalance: 30
     },
     {
         name: 'Lavender Artificial',
         url:'img/lavendelkonstgjord.jpeg',
         price: 299,
-        stockBalance: 75
+        stockBalance: 10
     },
     {
         name: 'Azura Silver Eucalyptus',
         url:'img/silvereukaluptus Azura.jpeg',
         price: 149,
-        stockBalance: 100
+        stockBalance: 5
     },
     {
         name: 'Spring heather',
         url:'img/vårljung.jpeg',
         price: 99,
-        stockBalance: 200
+        stockBalance: 15
     },
   ];
 
