@@ -29,6 +29,13 @@ body {
     padding: 2px;
     text-align: center;
 }
+ 
+
+/* We can change sizes of images and adjust them to their divs later but now they are visible and fits in a row */
+img {
+    max-width: 18vw;
+    max-height: 100vh;
+}
 
 .shopping-bag-wrapper {
     background-color: lightgreen;

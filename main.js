@@ -6,33 +6,33 @@ import ShoppingCart from './modules/shoppingbag.js';
 const MOCKPRODUCTS = [
     {
         name: 'Venus Flytrap',
-        url:'kj212123kjasdkjsadkad12lk',
-        price: 200,
+        url:'img/venusfalla-ny.jpeg',
+        price: 199,
         stockBalance: 100
     },
     {
-        name: 'Zombie Plant',
-        url:'kj212123kjasdkjsadkad1rhsrd2lk',
-        price: 200,
+        name: 'Hibiskus',
+        url:'img/hibiskus.jpeg',
+        price: 249,
+        stockBalance: 50
+    },
+    {
+        name: 'Lavender Artificial',
+        url:'img/lavendelkonstgjord.jpeg',
+        price: 299,
+        stockBalance: 75
+    },
+    {
+        name: 'Azura Silver Eucalyptus',
+        url:'img/silvereukaluptus Azura.jpeg',
+        price: 149,
         stockBalance: 100
     },
     {
-        name: 'Scary Plant',
-        url:'kj212123kjasdkjsadkadshdsrhd12lk',
-        price: 200,
-        stockBalance: 100
-    },
-    {
-        name: 'Very Scary Plant',
-        url:'kj212123kjasdkjsadkaulud12lk',
-        price: 200,
-        stockBalance: 100
-    },
-    {
-        name: 'Mega Scary Plant',
-        url:'kj212123kjasdkjsadkaetawd12lk',
-        price: 200,
-        stockBalance: 100
+        name: 'Spring heather',
+        url:'img/vårljung.jpeg',
+        price: 99,
+        stockBalance: 200
     },
   ];
 

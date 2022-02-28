@@ -17,15 +17,15 @@ function displayProducts(productList, addToCart) { //changed into productList in
 
         const productPrice = document.createElement('h5');
         productCard.appendChild(productPrice);
-        productPrice.textContent =  'Price: ' + product.price;
+        productPrice.textContent =  'Price: ' + product.price + ' SEK';
         
         const prodStockBalance = document.createElement('h5');
         productCard.appendChild(prodStockBalance);
-        prodStockBalance.textContent = 'Stock: ' + product.stockBalance;
+        prodStockBalance.textContent = 'In stock: ' + product.stockBalance;
 
         const prodButton = document.createElement('button');
         productCard.appendChild(prodButton);
-        prodButton.textContent = 'buy';
+        prodButton.textContent = 'BUY';
         prodButton.addEventListener('click', () => addToCart(product));
 
         productCard.className = 'product-card';
