@@ -1,5 +1,5 @@
 import Product from './modules/products.js';
-import {displayProducts, updateShoppingCart} from './modules/display.js';
+import {displayCart, displayProducts, updateShoppingCart} from './modules/display.js';
 import ShoppingCart from './modules/shoppingbag.js';
 
 
@@ -40,9 +40,7 @@ const products = MOCKPRODUCTS.map((data)=>{
     return new Product(data.name, data.url, data.price, data.stockBalance);
 })
 
-const shoppingCart = new ShoppingCart() //this is on progress too 
+const shoppingCart = new ShoppingCart('test') //this is on progress too 
 
 displayProducts(products, shoppingCart.addItem);
-
-
-
+displayCart(shoppingCart.getItems());

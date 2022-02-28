@@ -1,6 +1,12 @@
 export default class ShoppingCart {
+    items = [];
+
     constructor () {
-        this.items = []; //should be an empty array, and we still need to figure this out. I removed the stuff on the parenthesis.  
+        this.addItem = this.addItem.bind(this);
+        this.removeItem = this.removeItem.bind(this);
+        this.totalSum = this.totalSum.bind(this);
+        this.purchaseProducts = this.purchaseProducts.bind(this);
+        this.getItems = this.getItems.bind(this);
     }
 
     //Adds ONE product to cart, or as many as specified by second argument
@@ -12,11 +18,15 @@ export default class ShoppingCart {
         console.log(this.items);
     }
 
+    getItems(){
+        return this.items;
+    }
+
     removeItem(product){
         //Google removing item from array. 
         // Delete-button which erases the selected product from shopping cart
 
-        this.items.pop(product);
+        this.items.splice(product);
     }
 
     totalSum() {

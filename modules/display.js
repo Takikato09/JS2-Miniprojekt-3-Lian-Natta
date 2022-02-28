@@ -36,7 +36,14 @@ function displayProducts(productList, addToCart) { //changed into productList in
 
 function updateShoppingCart (productList) {
     const cartContainer = document.querySelector('.shopping-bag-wrapper');
-//this is on progress. Not yet visible in DOM
-}    
+//This function should update the html inside the shoppingcart when the items in the cart changes.
+}
 
-export {displayProducts, updateShoppingCart};
+function displayCart(cartItems) {
+    const cartContainer = document.querySelector('.shopping-bag-wrapper');
+    for (const product of cartItems){
+        //Add html elements with the name, price etc of the product.
+    }
+}
+
+export { displayCart, displayProducts, updateShoppingCart};

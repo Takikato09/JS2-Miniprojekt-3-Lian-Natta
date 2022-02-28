@@ -1,0 +1,37 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+
+}
+.header-wrapper {
+    text-align: center;
+    font-size: 50px;
+}
+.product-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua;
+    border: black solid 1px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: lightpink;
+    border: black solid 1px;
+    margin: 3px;
+    padding: 2px;
+    text-align: center;
+}
+
+.shopping-bag-wrapper {
+    background-color: lightgreen;
+    border: black solid 1px;
+    padding: 10px;
+}
