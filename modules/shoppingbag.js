@@ -1,7 +1,14 @@
 import {displayProduct} from './display.js';
 export default class ShoppingCart {
-    constructor () {
+    constructor (name, url, price, stockBalance) {
         this.items = []; //should be an empty array
+
+        // What do these do in the shopping cart?
+        this.name = name;
+        this.url = url;
+        this.price = price;
+        this.stockBalance = stockBalance;
+
         
     }
 
