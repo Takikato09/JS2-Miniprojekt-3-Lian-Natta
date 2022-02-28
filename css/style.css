@@ -18,6 +18,7 @@ body {
     justify-content: center;
     background-color: aqua;
     border: black solid 1px;
+    padding: 40px;
 }
 
 .product-card {
@@ -25,7 +26,7 @@ body {
     flex-direction: column;
     background-color: lightpink;
     border: black solid 1px;
-    margin: 3px;
+    margin: 40px 5px;
     padding: 2px;
     text-align: center;
 }
@@ -33,12 +34,17 @@ body {
 
 /* We can change sizes of images and adjust them to their divs later but now they are visible and fits in a row */
 img {
-    max-width: 18vw;
-    max-height: 100vh;
+    border: 1px black solid;
+    object-fit: contain;
+    max-width: 100%;
 }
 
 .shopping-bag-wrapper {
     background-color: lightgreen;
     border: black solid 1px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
