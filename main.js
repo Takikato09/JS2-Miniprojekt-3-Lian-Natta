@@ -1,6 +1,7 @@
 import Product from './modules/products.js';
 import {displayCart, displayProducts} from './modules/display.js';
 import ShoppingCart from './modules/shoppingbag.js';
+import {getDataFromDatabase} from './modules/database.js';
 
 
 const MOCKPRODUCTS = [
@@ -49,3 +50,4 @@ function addItemToCart(item) {
 
 displayProducts(products, addItemToCart);
 displayCart(shoppingCart);
+getDataFromDatabase();
