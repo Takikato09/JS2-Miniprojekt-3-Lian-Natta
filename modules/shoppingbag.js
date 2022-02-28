@@ -1,24 +1,16 @@
-import {displayProduct} from './display.js';
 export default class ShoppingCart {
-    constructor (name, url, price, stockBalance) {
-        this.items = []; //should be an empty array
-
-        // What do these do in the shopping cart?
-        this.name = name;
-        this.url = url;
-        this.price = price;
-        this.stockBalance = stockBalance;
-
-        
+    constructor () {
+        this.items = []; //should be an empty array, and we still need to figure this out. I removed the stuff on the parenthesis.  
     }
 
-        addItem(product) {
-        
-         //TODO: Add logic for checking if the product is already in the cart and what should happen then?
-         // Add-button which adds one more of that specific product
-
+    //Adds ONE product to cart, or as many as specified by second argument
+    addItem(product, quantity = 1) {
+        //TODO: Add logic for checking if the product is already in the cart and what should happen then?
+        // Add-button which adds one more of that specific product
+        console.log('Added product to cart!', product.name, quantity); //this will show which plant we press in log
         this.items.push(product);
-     }
+        console.log(this.items);
+    }
 
     removeItem(product){
         //Google removing item from array. 
