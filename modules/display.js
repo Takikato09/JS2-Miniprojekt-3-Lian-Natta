@@ -1,5 +1,3 @@
-
-
 function displayProducts(productList, addToCart) { //changed into productList instead of mockproduct to make it clearer. 
     const container = document.querySelector('.product-wrapper'); //this is outside the loop since we only want to loop the products, not the wrapper. 
 
@@ -34,16 +32,48 @@ function displayProducts(productList, addToCart) { //changed into productList in
 
 }
 
-function updateShoppingCart (productList) {
+function displayCart(cart) {
     const cartContainer = document.querySelector('.shopping-bag-wrapper');
-//This function should update the html inside the shoppingcart when the items in the cart changes.
-}
+    cartContainer.innerHTML = ''; //to update everytime a user want to add another product
+    const cartItems = cart.getItems();
 
-function displayCart(cartItems) {
-    const cartContainer = document.querySelector('.shopping-bag-wrapper');
     for (const product of cartItems){
-        //Add html elements with the name, price etc of the product.
+       const cartItem = document.createElement ('div');
+        cartContainer.append(cartItem);
+
+        const itemImg = document.createElement ('img');
+        cartItem.appendChild(itemImg);
+        itemImg.src = product.url;
+
+        const itemName = document.createElement ('h5');
+        cartItem.appendChild(itemName);
+        itemName.textContent = product.name;
+
+        const removeButton = document.createElement('button');
+        cartItem.appendChild(removeButton);
+        removeButton.textContent = ' - ';
+
+        removeButton.addEventListener('click', () => cart.removeItem(product));
+
+        const addButton = document.createElement ('button');
+        cartItem.appendChild(addButton);
+        addButton.textContent = ' + ';
+        addButton.addEventListener('click', () => cart.addItem(product));
+
+        const itemPrice = document.createElement ('h6');
+        cartItem.appendChild(itemPrice);
+        itemPrice.textContent = product.price;
+
+        removeButton.className = 'remove-button';
+        addButton.className = 'add-button';
     }
+    const sum = document.createElement('h6');
+    cartContainer.appendChild(sum);
+    sum.textContent = 'totalSum';
+
+    const buyProductButton = document.createElement('button');
+    cartContainer.appendChild(buyProductButton);
+    buyProductButton.textContent = 'PURCHASE';
 }
 
-export { displayCart, displayProducts, updateShoppingCart};
+export { displayCart, displayProducts};
