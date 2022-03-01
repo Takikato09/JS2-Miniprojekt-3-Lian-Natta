@@ -37,7 +37,7 @@ function displayProducts(productList, addToCart) { //changed into productList in
 
 function displayCart(cart) {
     const cartContainer = document.querySelector('.shopping-bag-wrapper');
-    cartContainer.innerHTML = ''; //to update everytime a user want to add another product
+    cartContainer.innerHTML = ''; //to update everytime a user wants to add another product
     const cartItems = cart.getItems();
 
     for (const product of cartItems){
