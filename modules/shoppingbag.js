@@ -11,7 +11,7 @@ export default class ShoppingCart {
         this.quantity = 0;
     }
 
-    addItem(product, quantity = 1) {
+    addItem(product, quantity) {
 
         const productIsAlreadyInCart = this.items.includes(product);//on progress
         
@@ -27,9 +27,8 @@ export default class ShoppingCart {
             for(const item of this.items){
                 console.log('NAMES:', item.name, product.name);
                 if(item.name === product.name){
-                    console.log('product already exists in the item array')
-                    // updateQuantity();
-                    //update quantity
+                    console.log('product already exists in the item array');
+                    
                     addNewItem = false;
                     break;
                 }
@@ -65,12 +64,7 @@ export default class ShoppingCart {
 
 }
 
-// function updateQuantity(){
-//     document.getElementsByClassName('item-quantity').textContent = quantity;
-//     quantity++;
-// }
 
-// export {updateQuantity};
 
 
 

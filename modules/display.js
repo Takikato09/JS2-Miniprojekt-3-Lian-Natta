@@ -46,6 +46,7 @@ function displayCart(cart) {
 
         const itemImg = document.createElement ('img');
         cartItem.appendChild(itemImg);
+        console.log(product.url); // Testing to see if we can see image which we can. Had a "undefined"-problem after Clara added the quantity in ShoppingBag
         itemImg.src = product.url;
 
         const itemName = document.createElement ('h5');
@@ -62,17 +63,17 @@ function displayCart(cart) {
         addButton.textContent = ' + ';
         addButton.addEventListener('click', () => cart.addItem(product));
 
-        // const itemQuantity = document.createElement('h6');
-        // cartItem.appendChild(itemQuantity);
-        // itemQuantity.textContent = 'Quantity: ';
+        const itemQuantity = document.createElement('h6');
+        cartItem.appendChild(itemQuantity);
+        itemQuantity.textContent = 'Quantity: ' ;
 
         const itemPrice = document.createElement ('h6');
         cartItem.appendChild(itemPrice);
-        itemPrice.textContent = product.price;
+        itemPrice.textContent = product.price + ' SEK';
 
         removeButton.className = 'remove-button';
         addButton.className = 'add-button';
-        // itemQuantity.className = 'item-quantity';
+        itemQuantity.className = 'item-quantity';
        
     }
     const sum = document.createElement('h6');
