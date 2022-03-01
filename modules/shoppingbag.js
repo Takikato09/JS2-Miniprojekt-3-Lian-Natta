@@ -1,5 +1,6 @@
 export default class ShoppingCart {
     items = [];
+    quantity;
 
     constructor () {
         this.addItem = this.addItem.bind(this);
@@ -7,6 +8,7 @@ export default class ShoppingCart {
         this.totalSum = this.totalSum.bind(this);
         this.purchaseProducts = this.purchaseProducts.bind(this);
         this.getItems = this.getItems.bind(this);
+        this.quantity = 0;
     }
 
     addItem(product, quantity = 1) {
@@ -16,7 +18,27 @@ export default class ShoppingCart {
         //TODO: Add logic for checking if the product is already in the cart and what should happen then?
 
         console.log('Added product to cart!', product.name, quantity); //this will show which plant we press in log
-        this.items.push(product);
+        console.log(this.items);
+        if(this.items.length === 0){
+            this.items.push(product);
+        }
+        else{
+            let addNewItem = true;
+            for(const item of this.items){
+                console.log('NAMES:', item.name, product.name);
+                if(item.name === product.name){
+                    console.log('product already exists in the item array')
+                    // updateQuantity();
+                    //update quantity
+                    addNewItem = false;
+                    break;
+                }
+            }
+            if(addNewItem){
+                this.items.push(product);
+            }
+        }
+        
         console.log(this.items);
     }
 
@@ -42,6 +64,13 @@ export default class ShoppingCart {
     }
 
 }
+
+// function updateQuantity(){
+//     document.getElementsByClassName('item-quantity').textContent = quantity;
+//     quantity++;
+// }
+
+// export {updateQuantity};
 
 
 

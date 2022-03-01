@@ -55,7 +55,6 @@ function displayCart(cart) {
         const removeButton = document.createElement('button');
         cartItem.appendChild(removeButton);
         removeButton.textContent = ' - ';
-
         removeButton.addEventListener('click', () => cart.removeItem(product));
 
         const addButton = document.createElement ('button');
@@ -63,12 +62,18 @@ function displayCart(cart) {
         addButton.textContent = ' + ';
         addButton.addEventListener('click', () => cart.addItem(product));
 
+        // const itemQuantity = document.createElement('h6');
+        // cartItem.appendChild(itemQuantity);
+        // itemQuantity.textContent = 'Quantity: ';
+
         const itemPrice = document.createElement ('h6');
         cartItem.appendChild(itemPrice);
         itemPrice.textContent = product.price;
 
         removeButton.className = 'remove-button';
         addButton.className = 'add-button';
+        // itemQuantity.className = 'item-quantity';
+       
     }
     const sum = document.createElement('h6');
     cartContainer.appendChild(sum);
