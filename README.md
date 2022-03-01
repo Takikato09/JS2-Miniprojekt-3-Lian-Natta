@@ -5,4 +5,4 @@ We have decided to make this whole project in English. This applies to website, 
 
 Project has been co-coded by us at times, and individually coded when we've been in separate locations. We started by creating a project with issues to keep track of our tasks and we have handled them and taken on things along the way. 
 
-***** THIS WEBSITE IS NOT YET FINISHED. IT IS STILL IN PROGRESS! A FEW METHODS AND A CONNECTION TO CHECK STOCK BALANCE IS MISSING. *****
+***** THIS WEBSITE IS NOT YET FINISHED. IT IS STILL IN PROGRESS! A FEW METHODS, A CONNECTION TO CHECK STOCK BALANCE AND STYLING IS MISSING. *****
